@@ -1,0 +1,16 @@
+[
+  {
+    "id": "school-1",
+    "name": "Green Future Academy",
+    "lat": 37.7749,
+    "lon": -122.4194,
+    "details": "San Francisco eco school"
+  },
+  {
+    "id": "school-2",
+    "name": "Eco Warriors High",
+    "lat": 51.5074,
+    "lon": -0.1278,
+    "details": "London sustainability school"
+  }
+]
