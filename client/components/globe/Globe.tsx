@@ -59,7 +59,11 @@ function Marker({
         }}
       >
         <sphereGeometry args={[0.035, 12, 12]} />
-        <meshStandardMaterial color={hovered ? "#ffffff" : "#aaaaaa"} emissive={hovered ? "#ffffff" : "#000000"} emissiveIntensity={hovered ? 1 : 0} />
+        <meshStandardMaterial
+          color={hovered ? "#ffffff" : "#aaaaaa"}
+          emissive={hovered ? "#ffffff" : "#000000"}
+          emissiveIntensity={hovered ? 1 : 0}
+        />
       </mesh>
       {hovered && (
         <Html distanceFactor={10} position={[0.05, 0.05, 0]}>
@@ -96,19 +100,40 @@ export default function Globe({
 
   const markers = useMemo(() => {
     const radius = 2.02; // slightly above surface
-    return schools.map((s) => ({ school: s, pos: latLonToVector3(s.lat, s.lon, radius) }));
+    return schools.map((s) => ({
+      school: s,
+      pos: latLonToVector3(s.lat, s.lon, radius),
+    }));
   }, [schools]);
 
   return (
     <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
       <ambientLight intensity={0.7} />
       <directionalLight position={[5, 3, 5]} intensity={1} />
-      <Stars radius={50} depth={20} count={2000} factor={2} saturation={0} fade speed={1} />
+      <Stars
+        radius={50}
+        depth={20}
+        count={2000}
+        factor={2}
+        saturation={0}
+        fade
+        speed={1}
+      />
       <Earth textureUrl={textureUrl} />
       {markers.map(({ school, pos }) => (
-        <Marker key={school.id} position={pos} school={school} onClick={(s) => onSelectSchool?.(s)} />
+        <Marker
+          key={school.id}
+          position={pos}
+          school={school}
+          onClick={(s) => onSelectSchool?.(s)}
+        />
       ))}
-      <OrbitControls enablePan={false} enableZoom={false} autoRotate autoRotateSpeed={0.25} />
+      <OrbitControls
+        enablePan={false}
+        enableZoom={false}
+        autoRotate
+        autoRotateSpeed={0.25}
+      />
     </Canvas>
   );
 }

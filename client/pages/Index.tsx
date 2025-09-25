@@ -23,7 +23,8 @@ export default function Index() {
               transition={{ delay: 0.1, duration: 0.6 }}
               className="text-white/80 text-lg max-w-xl"
             >
-              Gamified environmental education. Learn, play, and earn EcoCoins while exploring a living 3D Earth.
+              Gamified environmental education. Learn, play, and earn EcoCoins
+              while exploring a living 3D Earth.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -31,8 +32,19 @@ export default function Index() {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="flex gap-3"
             >
-              <Link to="/login"><Button className="bg-white text-black hover:bg-white/90 shadow-[0_0_25px_rgba(255,255,255,0.5)]">Login</Button></Link>
-              <Link to="/register"><Button variant="outline" className="border-white/40 text-white hover:bg-white/10">Register</Button></Link>
+              <Link to="/login">
+                <Button className="bg-white text-black hover:bg-white/90 shadow-[0_0_25px_rgba(255,255,255,0.5)]">
+                  Login
+                </Button>
+              </Link>
+              <Link to="/register">
+                <Button
+                  variant="outline"
+                  className="border-white/40 text-white hover:bg-white/10"
+                >
+                  Register
+                </Button>
+              </Link>
             </motion.div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6">
               {[
@@ -42,7 +54,10 @@ export default function Index() {
                 { label: "Leaderboard", href: "/leaderboard" },
               ].map((c) => (
                 <Link key={c.label} to={c.href}>
-                  <motion.div whileHover={{ y: -4 }} className="glass rounded-xl p-4 text-center text-sm">
+                  <motion.div
+                    whileHover={{ y: -4 }}
+                    className="glass rounded-xl p-4 text-center text-sm"
+                  >
                     <span className="text-white/90">{c.label}</span>
                   </motion.div>
                 </Link>

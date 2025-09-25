@@ -104,6 +104,10 @@
     @apply bg-white/10 backdrop-blur-xl border border-white/20 shadow-[0_0_30px_rgba(255,255,255,0.15)];
   }
 
-  .font-orbitron { font-family: 'Orbitron', system-ui, sans-serif; }
-  .font-sans { font-family: 'Space Grotesk', system-ui, sans-serif; }
+  .font-orbitron {
+    font-family: "Orbitron", system-ui, sans-serif;
+  }
+  .font-sans {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+  }
 }
