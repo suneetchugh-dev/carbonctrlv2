@@ -312,7 +312,11 @@ export default function Index() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="h-6 w-6 rounded-sm bg-white shadow-[0_0_15px_rgba(255,255,255,0.7)]" />
+                <img 
+                  src="/logo.png" 
+                  alt="CarbonCtrl Logo" 
+                  className="h-6 w-6 rounded-sm object-cover shadow-[0_0_15px_rgba(255,255,255,0.7)]" 
+                />
                 <span className="font-orbitron tracking-widest text-lg text-white">CarbonCtrl</span>
               </div>
               <p className="text-white/60 text-sm leading-relaxed">

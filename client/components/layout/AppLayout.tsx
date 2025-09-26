@@ -78,7 +78,11 @@ export default function AppLayout({
           )}
         >
           <Link to="/" className="flex items-center gap-3">
-            <div className="h-6 w-6 rounded-sm bg-white shadow-[0_0_15px_rgba(255,255,255,0.7)]" />
+            <img 
+              src="/logo.png" 
+              alt="CarbonCtrl Logo" 
+              className="h-8 w-8 rounded-sm object-cover shadow-[0_0_15px_rgba(255,255,255,0.7)]" 
+            />
             <span className="font-orbitron tracking-widest text-lg text-white">
               CarbonCtrl
             </span>
