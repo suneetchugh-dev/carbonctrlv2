@@ -313,7 +313,7 @@ export default function Index() {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <img 
-                  src="/logo.png" 
+                  src="/logo.jpg" 
                   alt="CarbonCtrl Logo" 
                   className="h-6 w-6 rounded-sm object-cover shadow-[0_0_15px_rgba(255,255,255,0.7)]" 
                 />
