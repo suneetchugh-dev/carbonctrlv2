@@ -43,7 +43,7 @@ export default function Login() {
   }
 
   return (
-    <AppLayout showGlobe showNavbar={false}>
+    <AppLayout showGlobe showNavbar={false} showChatbot={false}>
       <div className="container mx-auto px-6 min-h-screen flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
